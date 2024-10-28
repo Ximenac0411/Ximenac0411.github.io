@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Paciente</title>
+</head>
+<body>
+<center>
+<div class="card">
+<div style="display: flex; justify-content: space-between; text-align: left-side;">
+  <img src="ROYAL.jpg" style="width:100px;height:85px;">
+    <h2>Registro de Paciente</h2>
+    <form action="paciente.php" method="post">
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="coolinput">
+    <label for="input" class="text">ID Paciente:</label>
+    <input type="text" placeholder="Write here..." name="input" class="input">
+</div>
+<div class="coolinput">
+    <label for="input" class="text">Nombre:</label>
+    <input type="text" placeholder="Write here..." name="input" class="input">
+</div>
+<div class="coolinput">
+    <label for="input" class="text">Apellido Paterno:</label>
+    <input type="text" placeholder="Write here..." name="input" class="input">
+</div>
+<div class="coolinput">
+    <label for="input" class="text">Apellido Materno:</label>
+    <input type="text" placeholder="Write here..." name="input" class="input">
+</div>
+<div class="coolinput">
+    <label for="input" class="text">Telefono:</label>
+    <input type="text" placeholder="Write here..." name="input" class="input">
+</div>
+
+	<!--
+        <label for="id_paciente">ID Paciente:</label>
+        <input type="text" id="id_paciente" name="id_paciente" required><br><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido_paterno">Apellido Paterno:</label>
+        <input type="text" id="apellido_paterno" name="apellido_paterno" required><br><br>
+
+        <label for="apellido_materno">Apellido Materno:</label>
+        <input type="text" id="apellido_materno" name="apellido_materno" required><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
+-->
+        <label for="fecha">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select><br><br>
+		<div class="coolinput">
+    <label for="input" class="text">Direccion:</label>
+    <input type="text" placeholder="Write here..." name="input" class="input">
+</div>
+<!--
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+-->
+ <button class="btn-shine">
+    <span>Registrar paciente</span>
+     </button>
+     <!--   <input type="submit" value="Registrar Paciente">
+		</center>
+		</div>
+		boton-->
+			
+<style>			
+button {
+  position: relative;
+  margin: 0;
+  padding: 17px 35px;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #fff;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+  border-radius: 10px;
+  color: #818CF8;
+  font-weight: 400;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+button span {
+  color: #818CF8;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+button:hover {
+  animation: rotate624 0.7s ease-in-out both;
+}
+
+button:hover span {
+  animation: storm1261 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate624 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm1261 {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+.btn-shine {
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-shine span {
+  z-index: 20;
+}
+
+.btn-shine:after {
+  background: #38ef7d;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.4;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+.btn-shine:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+			
+	</style>		
+			<!--fondo-->
+            <style>
+			 
+.card {
+  width: 500px;
+  height: 700px;
+  border-radius: 30px;
+  background: lightgrey;
+  box-shadow: rgba(70, 50, 93, 0.25) 0px 50px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+</style>
+		<!--cajas-->	
+			<style>
+			
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  max-width: 240px;
+}
+
+.coolinput label.text {
+  font-size: 0.75rem;
+  color: #818CF8;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+.coolinput input[type=text].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #818CF8 solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+
+.coolinput input[type=text].input:focus {
+  outline: none;
+}
+			</style>
+
+    </form>
+	
+</body>
+</html>

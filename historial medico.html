@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Historial Médico</title>
+</head>
+<body>
+    <h2>Registro de Historial Médico</h2>
+    <form action="registro_historial.php" method="post">
+        <label for="id_historial">ID Historial:</label>
+        <input type="text" id="id_historial" name="id_historial" required><br><br>
+
+        <label for="id_paciente">ID Paciente:</label>
+        <input type="text" id="id_paciente" name="id_paciente" required><br><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Registrar Historial Médico">
+    </form>
+</body>
+</html>
